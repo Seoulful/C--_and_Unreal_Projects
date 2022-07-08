@@ -8,23 +8,44 @@ class Shape {
 public:
     string color;
 
-    void getArea() {
-        cout << "The area is x." << "\n";
+    int getArea() {
+        
     }
 };
 
 class Rectangle : public Shape {
+public:
     int height;
     int width;
+
+    int getArea() {
+        int x = height;
+        int y = width;
+        return x * y;
+    }
 };
 
 class Triangle : public Shape {
+public:
     int base;
     int height;
+
+    int getArea() {
+        int x = base;
+        int y = height;
+
+        return x * 0.5 * y;
+    }
 };
 
 class Circle : public Shape {
+public:
     int radius;
+
+    int getArea() {
+        int x = radius;
+        return 3.14159 * pow(x, 2);
+    }
 };
 
 int main()
